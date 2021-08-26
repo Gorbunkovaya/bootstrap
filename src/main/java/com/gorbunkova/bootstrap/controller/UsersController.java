@@ -65,7 +65,7 @@ public class UsersController {
     }
 
 
-    @PostMapping(value = "/admin")
+    @PostMapping(value = "/admin/update")
     public String updateUser(@ModelAttribute("user") User user, @RequestParam(value = "rolesbox") String[] rolesBox) {
         Set<Role> roles = new HashSet<>();
         for (String rolesBoxes : rolesBox) {
