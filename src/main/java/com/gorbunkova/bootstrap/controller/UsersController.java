@@ -64,7 +64,6 @@ public class UsersController {
         return "redirect:/admin";
     }
 
-
     @PostMapping(value = "/admin/update")
     public String updateUser(@ModelAttribute("user") User user, @RequestParam(value = "rolesbox") String[] rolesBox) {
         Set<Role> roles = new HashSet<>();
