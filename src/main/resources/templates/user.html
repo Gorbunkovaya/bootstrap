@@ -14,7 +14,7 @@
     <span>
     <span class="navbar-brand font-weight-bold" th:text="${user.email}"></span>
     <span class="navbar-brand"
-          th:text="'with roles: ' + ${user.roles}"></span>
+          th:text="'with roles: ' + ${user.roles.toString().replace('[','').replace(']','')}"></span>
     </span>
     <ul class="navbar-nav">
         <li class="nav-item">
@@ -51,7 +51,7 @@
                     <td th:text="${user.login}">Username</td>
                     <td th:text="${user.age}">Age</td>
                     <td th:text="${user.email}">Email</td>
-                    <td th:text="${user.roles}">Role</td>
+                    <td th:text="${user.roles.toString().replace('[','').replace(']','')}">Role</td>
                 </tr>
                 </tbody>
             </table>
